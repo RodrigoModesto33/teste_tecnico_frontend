@@ -5,14 +5,14 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <div className="jumbotron" style={{ borderRadius: '20px' }}>
+        <div className="jumbotron" style={{ marginTop: '4rem',borderRadius: '50px' }}>
           <div className="container-expand-lg">
             <h1 className="display-3"> Informes sobre Coronavírus</h1>
             <p className="text-justify">Um novo vírus que tem causado doença respiratória pelo agente coronavírus, com casos recentemente registrados na China. Importante saber que os coronavírus são uma grande família viral, conhecidos desde meados de 1960, que causam infecções respiratórias em seres humanos e em animais. Com quase três mil casos confirmados, segundo o último boletim da OMS, do dia 27 de janeiro, todo o território chinês passa a ser considerado área de transmissão ativa da doença.</p>
           </div>
         </div>
 
-        <div className=" jumbotron" style={{ borderRadius: '20px' }}>
+        <div className=" jumbotron" style={{ borderRadius: '50px' }}>
           <div className="row">
             <div className="col-md-4">
               <h2>Como os coronavírus são transmitidos?</h2>

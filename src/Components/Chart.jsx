@@ -1,38 +1,73 @@
-import React, {Component} from 'react';
-import {Bar} from 'react-chartjs-2';
+import React, { Component } from 'react';
+import { Bar, Line, Pie } from 'react-chartjs-2';
 
-class Chart extends Component{
-  constructor(props){
+class Chart extends Component {
+  constructor(props) {
     super(props);
     this.state = {
-      chartData:props.chartData
+      chartData: props.chartData
     }
   }
 
   static defaultProps = {
-    displayTitle:true,
+    displayTitle: true,
     displayLegend: true,
-    legendPosition:'right',
-    title:'Info'
+    legendPosition: 'right',
+    title: 'Info'
   }
 
-  render(){
+  render() {
     return (
-      <div className="chart">
-        <Bar
-          data={this.state.chartData}
-          options={{
-            title:{
-              display:this.props.displayTitle,
-              text:this.props.title,
-              fontSize:25
-            },
-            legend:{
-              display:this.props.displayLegend,
-              position:this.props.legendPosition
-            }
-          }}
-        />
+      <div className="row">
+        <div className="col-md-6">
+          <Bar
+            data={this.state.chartData}
+            options={{
+              title: {
+                display: this.props.displayTitle,
+                text: this.props.title,
+                fontSize: 30
+
+              },
+              legend: {
+                display: this.props.displayLegend,
+                position: this.props.legendPosition
+              }
+            }}
+          />
+        </div>
+        <div className="col-md-6">
+          <Line
+            data={this.state.chartData}
+            options={{
+              title: {
+                display: this.props.displayTitle,
+                text: this.props.title,
+                fontSize: 25
+              },
+              legend: {
+                display: this.props.displayLegend,
+                position: this.props.legendPosition
+              }
+            }}
+          />
+        </div>
+        <div className="col-md-7">
+          <Pie
+            data={this.state.chartData}
+            options={{
+              title: {
+                display: this.props.displayTitle,
+                text: this.props.title,
+                fontSize: 25
+              },
+              legend: {
+                display: this.props.displayLegend,
+                position: this.props.legendPosition
+              }
+            }}
+          />
+        </div>
       </div>
     )
   }
