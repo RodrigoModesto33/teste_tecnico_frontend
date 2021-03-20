@@ -14,7 +14,7 @@ export default class Grafics extends Component {
 
 
   getChartData() {
-    const { casos } = this.state;
+   // const { casos } = this.state;
 
     this.setState({
       chartData: {
@@ -42,25 +42,25 @@ export default class Grafics extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: '4rem', }}>
-        <div className="Container">
+      <div style={{ marginTop: '4rem' }}>
+        <div className="Container ">
           <h2 style={{ textAlign: 'center' }}>Welcome to React</h2>
         </div>
-        <div style={{ alignItems: 'center', display: 'flex', }}>
-          <div style={{ display: 'flex', width: "50%" }}>
-            <Bar chartData={this.state.casos} location={'casos.show.name'} legendPosition="bottom" />
+        <div   style={{ alignItems: 'center', display: 'flex'}}>
+          <div style={{ display: 'flex',    width: "50%" }}>
+            <Bar chartData={this.state.casos} title={'casos.show.name'} legendPosition="bottom" />
           </div>
           <div style={{ display: 'flex', width: "50%" }}>
-            <Bar chartData={this.state.casos} location="Massachusetts" legendPosition="bottom" />
+            <Bar chartData={this.state.casos} title=" " legendPosition="bottom" />
           </div>
         </div>
         <br/>
         <div style={{ alignItems: 'center', display: 'flex', }}>
           <div style={{ display: 'flex', width: "50%" }}>
-            <Bar chartData={this.state.casos} location="Massachusetts" legendPosition="bottom" />
+            <Bar chartData={this.state.casos} title="Massachusetts" legendPosition="bottom" />
           </div>
           <div style={{ display: 'flex', width: "50%" }}>
-            <Bar chartData={this.state.casos} location="Massachusetts" legendPosition="bottom" />
+            <Bar chartData={this.state.casos} title="Massachusetts" legendPosition="bottom" />
           </div>
         </div>
       </div>
