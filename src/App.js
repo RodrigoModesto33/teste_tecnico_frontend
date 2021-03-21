@@ -2,7 +2,7 @@
 import React, { Component } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Home from './Components/Home'
-import Grafics from './Components/Grafics'
+import Grafics from './Components/Grafics.jsx'
 import logo from "./assets/imgs/logoW.png"
 
 

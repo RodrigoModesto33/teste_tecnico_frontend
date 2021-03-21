@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Bar, Line, Pie } from 'react-chartjs-2';
+import { Line, Pie } from 'react-chartjs-2';
 
 class Chart extends Component {
   constructor(props) {
@@ -13,19 +13,19 @@ class Chart extends Component {
     displayTitle: true,
     displayLegend: true,
     legendPosition: 'right',
-    title: 'Info'
+    title: 'Total de casos'
   }
 
   render() {
     return (
-      <div className="row">
-        <div className="col-md-6">
-          <Bar
+      <div className="row jumbotron" >
+        <div className='col-xl-6' >
+          <Line
             data={this.state.chartData}
             options={{
               title: {
                 display: this.props.displayTitle,
-                text: this.props.title,
+                text: "Total de casos",
                 fontSize: 30
 
               },
@@ -36,30 +36,15 @@ class Chart extends Component {
             }}
           />
         </div>
-        <div className="col-md-6">
-          <Line
-            data={this.state.chartData}
-            options={{
-              title: {
-                display: this.props.displayTitle,
-                text: this.props.title,
-                fontSize: 25
-              },
-              legend: {
-                display: this.props.displayLegend,
-                position: this.props.legendPosition
-              }
-            }}
-          />
-        </div>
-        <div className="col-md-7">
+
+        <div className="col-xl-6 ">
           <Pie
             data={this.state.chartData}
             options={{
               title: {
                 display: this.props.displayTitle,
                 text: this.props.title,
-                fontSize: 25
+                fontSize: 30
               },
               legend: {
                 display: this.props.displayLegend,
