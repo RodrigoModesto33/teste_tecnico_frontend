@@ -22,7 +22,7 @@ export default class App extends Component {
             <div className="collapse navbar-collapse">
 
               <Link to={"/grafics"} className="navbar-brand">
-                <b>Grafics</b>
+                <b>Situação no Brasil</b>
                   </Link>
             </div>
           </nav>
